@@ -1,16 +1,40 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #15385D;
+  --blue : #3D658F;
+  --grey : #CCCCCC;
+  --lightgrey : #94B2D1;
+  --opacityGrey : hsl(211,63,22,70%);
+  --ultraLightGrey : hsl(211,63,22,4%);
+}
+
+@theme {
+  --animate-bob: chevron-bob 2s ease-in-out  infinite;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-lightgrey: var(--lightgrey);
+  --color-grey : var(--grey);
+  --color-ultraLightGrey : var(--ultraLightGrey);
+  --color-opacityGrey : var(--opacityGrey); 
+  --font-sans: var(--font-kufi);
+  --font-mono: var(--font-kufi);
 }
+
+@keyframes chevron-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem); 
+  }
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -18,9 +42,23 @@
     --foreground: #ededed;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  max-width: 1240px;
+  margin: auto;
+  position: relative;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 30px;
 }
