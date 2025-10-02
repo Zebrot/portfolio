@@ -3,8 +3,8 @@ import Link from "next/link"
 
 export default function Hero() {
     return (
-        <div className="flex justify-between h-screen py-40 flex-col text-center relative w-full -mb-60">
-            <h1 className="text-(34px) block mx-auto tracking-[35px] ">
+        <div className="animate-fadeIn flex justify-between h-screen py-40 flex-col text-center relative w-full -mb-60">
+            <h1 className="block mx-auto max-md:tracking-[10px] max-lg:tracking-[25px] tracking-[35px] ">
                 terrancle.dev
             </h1>
             <div className="w-full h-20 absolute bottom-2 animate-bob">

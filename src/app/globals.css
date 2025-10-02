@@ -7,12 +7,14 @@
   --blue : #3D658F;
   --grey : #CCCCCC;
   --lightgrey : #94B2D1;
+  --green : #66B848;
   --opacityGrey : hsl(211,63,22,70%);
   --ultraLightGrey : hsl(211,63,22,4%);
 }
 
 @theme {
   --animate-bob: chevron-bob 2s ease-in-out  infinite;
+  --animate-fadeIn : fade-in 0.8s forwards;
 }
 
 @theme inline {
@@ -21,7 +23,8 @@
   --color-lightgrey: var(--lightgrey);
   --color-grey : var(--grey);
   --color-ultraLightGrey : var(--ultraLightGrey);
-  --color-opacityGrey : var(--opacityGrey); 
+  --color-opacityGrey : var(--opacityGrey);
+  --color-green : var(--green);
   --font-sans: var(--font-kufi);
   --font-mono: var(--font-kufi);
 }
@@ -34,6 +37,10 @@
     transform: translateY(-0.5rem); 
   }
 }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
 
 @media (prefers-color-scheme: dark) {
@@ -50,15 +57,45 @@ body {
   color: var(--foreground);
 }
 .container {
-  max-width: 1240px;
+  max-width: 1280px;
   margin: auto;
   position: relative;
 }
-
 h1 {
   font-size: 34px;
 }
-
 h2 {
   font-size: 30px;
+}
+
+@media(max-width : 1279px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media(max-width : 1023px){
+  .container {
+    max-width: 896px;
+    padding: 5px;
+  }
+}
+@media(max-width : 895px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media(max-width : 767px) {
+  .container {
+    max-width: fit-content;
+  }
+  h1 {
+  font-size: 24px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p{
+    font-size: 12px;
+  }
+
 }

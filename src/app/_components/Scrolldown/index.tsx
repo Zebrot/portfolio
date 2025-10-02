@@ -18,7 +18,7 @@ export default function Scrolldown({children, title} : {title? : string, childre
                 <h2 className="mb-3">{title}</h2>
             </div>
             <div className={`
-                overflow-hidden
+                overflow-hidden text-[20px]
                 ${isOpen && 'max-h-[700px] opacity-100 [transition-property:opacity,max-height] [transition-duration:200ms,600ms] [transition-delay:400ms,200ms]'} 
                 ${!isOpen && 'max-h-[0px] opacity-0 [transition-property:opacity,max-height] [transition-duration:200ms,500ms] [transition-delay:0ms, 100ms]'} 
             `}>

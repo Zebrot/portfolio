@@ -16,7 +16,7 @@ export function useActiveSection(sectionIds: string[]) {
             setActiveId(id);
           }
         },
-        { rootMargin: "-40% 0px -60% 0px" } // adjust threshold
+        { rootMargin: "-60% 0px -40% 0px" } // adjust threshold
       );
 
       observer.observe(el);
