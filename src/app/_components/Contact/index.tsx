@@ -20,7 +20,7 @@ export default function Contact() {
 
     return (
         <div className="my-20">
-            <h2 className=" text-center">Créons quelque chose d'exceptionnel ensemble !</h2>
+            <h2 className=" text-center">Créons quelque chose d&apos;exceptionnel ensemble !</h2>
             <div className="mt-10 flex max-lg:flex-col gap-10 px-5 items-center">
                 <div className="w-90 h-90  max-md:w-60 max-md:h-60  rounded-full relative overflow-hidden shadow-2xl">
                     <div className={`w-140 h-90 max-md:w-110 max-md:h-60  absolute top-[52%] left-[53%] translate-x-[-50%] translate-y-[-50%] flex align-center items-center`}>

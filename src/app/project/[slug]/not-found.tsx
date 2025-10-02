@@ -8,7 +8,7 @@ export default function NotFound() {
             </Link>
             
             <span className="text-[224px] tracking-[15px] text-center">404</span>
-            <p className="text-center text-[24px]">Ce projet n'existe pas... encore ?</p>
+            <p className="text-center text-[24px]">Ce projet n`&apos;`existe pas... encore ?</p>
         </div>
     )
 }

@@ -1,7 +1,6 @@
 
 type sectionProps = {
     id : string,
-    isActive? : boolean,
     children? : React.ReactNode
 }
 
@@ -11,7 +10,7 @@ const titles: Record<string, string> = {
   'wip' : "en ce moment",
 };
 
-export default function Section({id, isActive, children} : sectionProps) {
+export default function Section({id, children} : sectionProps) {
     const title = titles[id] ?? id;
     return (
         <section className='scroll-mt-30 max-lg:scroll-mt-10 mt-80 max-lg:mt-45 min-h-30' id={id}>

@@ -15,6 +15,7 @@ export default function Schema() {
 
   return (
     <Script
+      id="schemaOrg"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />

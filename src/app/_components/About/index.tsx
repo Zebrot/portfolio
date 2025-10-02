@@ -37,13 +37,13 @@ export default function About() {
       <>
         <div className="shadow-sm max-md:py-3 max-md:text-foreground p-8 py-15 rounded-lg bg-ultraLightGrey text-opacityGrey text-center my-15 max-lg:mb-1 flex flex-col gap-5 text-[24px] w-[80%] mx-auto">
           <p>
-            Je suis Pierre Terrancle, développeur web passionné par la création d’expériences numériques exceptionnelles
+            Je suis Pierre Terrancle, développeur web passionné par la création d&apos;expériences numériques exceptionnelles
           </p>
           <p>
-            Alliant design et code, je m'attache à créer des solutions performantes techniquement et intuitives pour l'utilisateur
+            Alliant design et code, je m&apos;attache à créer des solutions performantes techniquement et intuitives pour l&apos;utilisateur
           </p>
           <p>
-            Mon terrain de prédilection : javaScript, en particulier l’écosystème React, enrichi aujourd’hui par les nouvelles perspectives de l’IA
+            Mon terrain de prédilection : javaScript, en particulier l&apos;écosystème React, enrichi aujourd&apos;hui par les nouvelles perspectives de l&apos;IA
           </p>
 
         </div>
