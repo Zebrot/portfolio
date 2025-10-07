@@ -8,6 +8,7 @@
   --grey : #CCCCCC;
   --lightgrey : #94B2D1;
   --green : #66B848;
+  --red : #FF0234;
   --opacityGrey : hsl(211,63,22,70%);
   --ultraLightGrey : hsl(211,63,22,4%);
 }
@@ -25,6 +26,7 @@
   --color-ultraLightGrey : var(--ultraLightGrey);
   --color-opacityGrey : var(--opacityGrey);
   --color-green : var(--green);
+  --color-red : var(--red);
   --font-sans: var(--font-kufi);
   --font-mono: var(--font-kufi);
 }

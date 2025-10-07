@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is my personal portfolio, which you can check out on terrancle.dev
 
-## Getting Started
+## Architecture
 
-First, run the development server:
+This project is built with the Next.js App router.
+The back-end solution is Sanity.io, a headless CMS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+_components are re-usable react components, while other folders are specific pages in the project : 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ - app/projects is the page that shows all the projects from the sanity back-end. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ - app/project/[slug] fetches the one sanity project that matches the [slug]. These pages are server-side generated for faster access, so the fetching happens at build time.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ - app/page.tsx is the main page of the website, because it is mostly built as a one-page, using scrolling to differentiate between sections.
 
-## Learn More
+There is a minimal API, handling POST requests to send an email to a pre-defined mail adress. 
 
-To learn more about Next.js, take a look at the following resources:
+## Cloning or testing 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you wish to clone this project to use, you will need a sanity.io project. 
+Check : https://www.sanity.io/docs/next-js-quickstart/setting-up-your-studio
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Your sanity backend must have projects, with at minimum a slug:string value. 
+The rest of the expected values for the projects are found in app/project/slug or in app/_components/projectCard
 
-## Deploy on Vercel
+For the mail sending to work, you will need a gmail account with an APP password. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Finally, you must have a .env file with these variables defined : 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+SANITY_ID = "your_sanity_project_id"
+GMAIL_APP_PASSWORD = "your_gmail_app_password"
+GMAIL_EMAIL_ADDRESS = "your_gmail_address"
+
+## Contact me 
+
+You can contact me on Github.com/Zebrot, or by mail via pi.terrancle@gmail.com 
