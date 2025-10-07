@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from 'nodemailer';
 
 const history: Record<string, number[]> = {}
 
@@ -34,35 +33,31 @@ export async function POST(request : NextRequest) {
 
 
     const body = await request.json()
-    const message = {
-        from: body.email,
-        to: process.env.PERSONAL_EMAIL,
-        subject: `Contact de ${body.email}`,
-        text: body.message,
-        html: `Portfolio contact message. <br/><p>${body.message} ,<br/> sent ${perMinute} mails this minute, ${perDay} this day.</p>`,
-    };
+    try {
+        const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'api-key': process.env.BREVO_API_KEY!,
+            },
+            body: JSON.stringify({
+                sender: { name: 'Portfolio', email: body.email },
+                to: [{ email: process.env.PERSONAL_EMAIL }],
+                subject: `Portfolio Contact: ${body.email}`,
+                textContent: `From: ${body.email}\n\n${body.message}`,
+            }),
+        })
 
-    const transporter = nodemailer.createTransport({
-        host: 'smtp-relay.brevo.com',
-        port: 587,
-        secure: false,
-        auth: {
-            user: process.env.SMTP_USER, 
-            pass: process.env.SMTP_PASS, 
-        },
-    });
+        if (!res.ok) {
+            const text = await res.text()
+            console.error('Brevo API error:', text)
+            return NextResponse.json({ error: 'Email failed' }, { status: 500 })
+        }
+        return NextResponse.json({ success: true })
 
-    console.log('SMTP config', { user: !!process.env.SMTP_USER, pass: !!process.env.SMTP_PASS, to : !!process.env.PERSONAL_EMAIL })
-    console.log('Sending message:', { from: body.email })
-
-    try{
-        await transporter.sendMail(message);
-        return NextResponse.json({status : 250})
+    } catch (err) {
+        console.error('Fetch error:', err)
+        return NextResponse.json({ error: 'Email failed' }, { status: 500 })
     }
-    catch(error){
-        return NextResponse.json(
-            {error : 'Connection refused !'},
-            {status : 500}
-        )
-    }
+    
 }
