@@ -36,17 +36,19 @@ export async function POST(request : NextRequest) {
     const body = await request.json()
     const message = {
         from: body.email,
-        to: process.env.GMAIL_EMAIL_ADDRESS,
+        to: process.env.PERSONAL_EMAIL,
         subject: `Contact de ${body.email}`,
         text: body.message,
-        html: `<p>${body.message} ,<br/> sent ${perMinute} mails this minute, ${perDay} this day.</p>`,
+        html: `Portfolio contact message. <br/><p>${body.message} ,<br/> sent ${perMinute} mails this minute, ${perDay} this day.</p>`,
     };
 
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp-relay.brevo.com',
+        port: 587,
+        secure: false,
         auth: {
-            user: process.env.GMAIL_EMAIL_ADDRESS,
-            pass: process.env.GMAIL_APP_PASSWORD,
+            user: process.env.SMTP_USER, 
+            pass: process.env.SMTP_PASS, 
         },
     });
     try{
