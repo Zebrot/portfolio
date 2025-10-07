@@ -51,8 +51,12 @@ export async function POST(request : NextRequest) {
             pass: process.env.SMTP_PASS, 
         },
     });
+
+    console.log('SMTP config', { user: !!process.env.SMTP_USER, pass: !!process.env.SMTP_PASS, to : !!process.env.PERSONAL_EMAIL })
+    console.log('Sending message:', { from: body.email })
+
     try{
-        transporter.sendMail(message);
+        await transporter.sendMail(message);
         return NextResponse.json({status : 250})
     }
     catch(error){
