@@ -29,7 +29,7 @@ export default function ContactForm() {
                 else
                     setSendingStatus(1)
             })
-            .catch((error) => setSendingStatus(-1))
+            .catch(() => setSendingStatus(-1))
     }
     return(
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 px-2 max-lg:text-[16px]">

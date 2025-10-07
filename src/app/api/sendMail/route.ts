@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
 const history: Record<string, number[]> = {}
 
@@ -42,7 +42,7 @@ export async function POST(request : NextRequest) {
         html: `<p>${body.message} ,<br/> sent ${perMinute} mails this minute, ${perDay} this day.</p>`,
     };
 
-    let transporter = nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: process.env.GMAIL_EMAIL_ADDRESS,
