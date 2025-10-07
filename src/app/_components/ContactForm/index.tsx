@@ -15,6 +15,7 @@ export default function ContactForm() {
         })
     }
     async function handleSubmit(e : FormEvent) {
+        setSendingStatus(2);
         e.preventDefault();
         fetch(`/api/sendMail`,{
             method:'POST',
@@ -59,10 +60,10 @@ export default function ContactForm() {
                 />                
             </div>
             <button type="submit" value='submit' disabled={sendingStatus != 0} className={`
-                ${sendingStatus == 0 && 'bg-lightgrey'} 
+                ${sendingStatus == 0 && 'bg-lightgrey cursor-pointer hover:translate-y-[1px] active:translate-y-[3px]'} 
                 ${sendingStatus == 1 && 'bg-green'}
                 ${sendingStatus == -1 && 'bg-red'}
-                outline-lightgrey w-full  
+                outline-lightgrey w-full  transition-translate duration-100
                 text-white rounded-lg text-center p-1`
             }>
                 {sendingStatus == 0 && 'Envoyer'}
