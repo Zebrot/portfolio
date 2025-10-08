@@ -20,6 +20,7 @@ export default function MainLayout({
   return (
     <html lang="fr" className= {`${Kufi.variable}`}>
       <head>
+        <title>terrancle.dev</title>
         <Schema />
       </head>
       <body>
