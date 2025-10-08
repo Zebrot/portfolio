@@ -18,7 +18,7 @@ export default function ToolsCard({title, tools, index} : cardProps) {
                 {tools.map((tool, index)=> (
                     <div key={index} className="flex-1 flex flex-col relative group">
                         <div className="relative h-full mb-3 max-md:mb-1 group-hover:scale-105 transition duration-100">
-                            <Image src={tool.image.toLocaleLowerCase()} alt={tool.name} fill/>
+                            <Image src={tool.image} alt={tool.name} fill/>
                         </div>
                         <p className="text-center max-lg:opacity-100 opacity-10 transition duration-200 group-hover:opacity-100">{tool.name}</p>
                     </div>

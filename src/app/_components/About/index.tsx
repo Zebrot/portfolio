@@ -24,7 +24,7 @@ const tools = [
     title : 'le reste',
     tools : [
       {name : 'figma', image : '/svg/logos/figma.svg'},
-      {name : 'github', image : '/svg/logos/githubBlanc.svg'},
+      {name : 'github', image : '/svg/logos/githubblanc.svg'},
       {name : 'claude AI', image : 'svg/logos/claude.svg'},
       {name : 'wordpress', image : '/svg/logos/wordpress.svg'},
       {name : 'PHP', image : '/svg/logos/php.svg'},
