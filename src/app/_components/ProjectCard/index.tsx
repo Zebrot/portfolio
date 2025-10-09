@@ -29,11 +29,11 @@ export default function ProjectCard({project, from, small} : {project : SanityDo
                 <div className="flex max-lg:flex-col justify-between w-full pt-1 gap-3">
                     <div>
                         <h2 className={`${small && '!text-[16px]'} tracking-[10px] max-lg:text-center`}>{project.title} </h2>
-                        <h3 className={`max-lg:hidden ${small && '!text-[16px]'} text-[24px] opacity-60`}> {project.subtitle} </h3>
+                        <h3 className={`max-lg:hidden ${small && '!text-[16px]'} text-[24px] text-opacityGrey`}> {project.subtitle} </h3>
                     </div>
                     <div className={`max-lg:hidden text-right ${small ? 'text-[16px]' : 'text-[20px]'}`}>
                         <p> {project.tools} </p>
-                        <p className="text-lightgrey"> {project.date} </p>
+                        <p className="text-opacityGrey"> {project.date} </p>
                     </div>
                 </div>
         </article>

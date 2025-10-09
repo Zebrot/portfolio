@@ -9,7 +9,7 @@ export default function Hero() {
             </h1>
             <div className="w-full h-20 absolute bottom-2 animate-bob">
                 <Link href='#about' className="opacity-40 hover:opacity-100 w-full flex justify-center">
-                    <Image  src='svg/chevronDown.svg' width={100} height={100} alt="" className="absolute top-0"/>
+                    <Image  src='svg/chevronDown.svg' width={100} height={100} alt="Click here to discover the rest !" className="absolute top-0"/>
                 </Link>
             </div>
         </div>

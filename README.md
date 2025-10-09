@@ -15,21 +15,34 @@ _components are re-usable react components, while other folders are specific pag
 
 There is a minimal API, handling POST requests to send an email to a pre-defined mail adress. 
 
-## Cloning or testing 
+## Sanity 
 
-If you wish to clone this project to use, you will need a sanity.io project. 
-Check : https://www.sanity.io/docs/next-js-quickstart/setting-up-your-studio
+This project uses Sanity to store data about the projects to show in the portfolio.
+Follow these steps to set-up a studio and a sanity back-end : https://www.sanity.io/docs/next-js-quickstart/setting-up-your-studio
+
 
 Your sanity backend must have projects, with at minimum a slug:string value. 
 The rest of the expected values for the projects are found in app/project/slug or in app/_components/projectCard
 
-For the mail sending to work, you will need a gmail account with an APP password. 
-
-Finally, you must have a .env file with these variables defined : 
-
+Your .env must contain the ID of your sanity project :
 SANITY_ID = "your_sanity_project_id"
-GMAIL_APP_PASSWORD = "your_gmail_app_password"
-GMAIL_EMAIL_ADDRESS = "your_gmail_address"
+
+## The Mail system 
+For the mail sending to work, you will need a Brevo account with an API key. 
+
+Don't forget to add the API key to the .env, as well as a mail address for the contact to be sent TO : 
+
+PERSONAL_EMAIL = "your_mail_address"
+BREVO_API_KEY = "your_API_key"
+
+## What's Next 
+
+This is my personal portfolio, so it is bound to evolve with the projects I take part in. 
+I also have a roadmap of new features to add shortly, and in the longer term : 
+
+ - In the short term, I want to add a dark theme, and an english translation of the content. I also intend to change some of the content to better reflect the niche market I'm trying to target (that is, young solo creatives)
+
+ - In the longer term, I'm aiming to migrate more of the data to Sanity, such as tools and services. I also intend to change a lot of the design as time goes by, hopefully showing more technical skill, especially in terms of web design and animation. 
 
 ## Contact me 
 

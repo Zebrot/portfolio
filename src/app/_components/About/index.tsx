@@ -16,7 +16,7 @@ const tools = [
       {name : 'sanity', image : '/svg/logos/sanity.svg'},
       {name : 'expressJs', image : '/svg/logos/express.svg'},
       {name : 'nodeJs', image : '/svg/logos/node.svg'},
-      {name : 'mongoDB', image : '/svg/logos/mongoDB.svg'},
+      {name : 'mongoDB', image : '/svg/logos/mongodb.svg'},
       {name : 'prisma', image : '/svg/logos/prisma.svg'},
     ]
   },

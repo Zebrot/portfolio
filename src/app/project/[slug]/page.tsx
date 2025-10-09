@@ -75,7 +75,7 @@ export default async function Single({
           <div className="flex-1 flex justify-end"> 
             <div className="h-fit rounded-2xl bg-(--foreground) text-right max-lg:px-2  px-8 py-2 w-fit shadow-xs/30">
               <p className="text-(--background) ]">{project.tools}</p>
-              <p className="text-(--lightgrey) my-0 " >{project.date}</p>
+              <p className="text-background opacity-70 my-0 " >{project.date}</p>
             </div>
           </div>
         </div>
