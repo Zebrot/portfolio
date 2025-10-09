@@ -20,6 +20,10 @@ export default function MainLayout({
   return (
     <html lang="fr" className= {`${Kufi.variable}`}>
       <head>
+        <meta charSet="UTF-8"/>
+        <meta name="description" content="Le portfolio de Pierre Terrancle, développeur Web Freelance à Paris" />
+        <meta name="keywords" content="Web developpment, Web, Web Design, Javsascript, Next.js, React, Wordpress, Développeur, Webmaster, Freelance developper, Website creation, Création de site, Front-end, Sanity.io" />
+        <meta name="author" content="Pierre Terrancle" />
         <title>terrancle.dev</title>
         <Schema />
       </head>

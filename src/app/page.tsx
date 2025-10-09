@@ -1,13 +1,15 @@
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import Link from "next/link";
-import Hero from "./_components/Hero";
 import Header from "./_components/Header";
 import Section from "./_components/Section";
 import ProjectCard from "./_components/ProjectCard";
-import About from "./_components/About";
-import Contact from "./_components/Contact";
-import Services from "./_components/Services";
+import dynamic from "next/dynamic";
+
+const Hero = dynamic(()=> import("./_components/Hero"));
+const About = dynamic(()=> import("./_components/About"));
+const Services = dynamic(()=> import("./_components/Services"));
+const Contact = dynamic(()=> import("./_components/Contact"));
 
 const POSTS_QUERY = `*[
   _type == "project"

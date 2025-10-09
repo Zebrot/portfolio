@@ -14,7 +14,7 @@ export default function ProjectCard({project, from, small} : {project : SanityDo
             
                 <div className={`relative border-2 border-foreground/10 hover:border-none rounded-4xl overflow-hidden ${small ? 'h-[300px] max-lg:h-[250px] max-md:h-[100px]' : 'h-[500px] max-lg:h-[300px] max-md:h-[200px]' } relative group`}>
                     <Link href={`/project/${project.slug.current}/?from=${from}`} className="absolute w-full h-full">
-                        <Image fill src={imageUrl?? '/default.png'} alt={project.title} className="transition duration-200 group-hover:scale-105"/>
+                        <Image priority fill src={imageUrl?? '/default.png'} alt={project.title} className="transition duration-200 group-hover:scale-105"/>
                         <div className={`opacity-0 group-hover:opacity-90 transition duration-200 absolute 
                             top-0 left-0 ${small ? 'text-[20px]' : 'text-[30px]'} text-(--background) bg-(--foreground)
                             h-full w-full text-center`}>
