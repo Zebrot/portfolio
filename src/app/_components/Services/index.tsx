@@ -9,32 +9,22 @@ const listOfServices : Service[] = [
     {
         title : 'Création de site Web sur Mesure',
         logo : '/svg/design.svg',
-        description : "Chaque projet mérite une solution unique. Je développe un site qui vous ressemble, avec votre vision et selon vos besoins. Un site performant, moderne et 100% adapté à votre activité."
-    },    
-    {
-        title : 'Conception Graphique & Ergonomie',
-        logo : '/svg/notes.svg',
-        description : "Je vous guide dans la création d'une interface où vos visiteurs se sentent à l'aise : menus clairs, informations bien organisées, design soigné. Et si vous partez de zéro, je crée les maquettes visuelles de votre projet."
+        description : "Chaque projet mérite une solution unique. Je créé un site entièrement personnalisé pour vous et votre activité. Et si vous partez de zéro, je vous aide à développer une identité de marque."
     },    
     {
         title : 'Solutions Web Évolutives',
         logo : '/svg/coding.svg',
-        description : "Plus qu'un simple site vitrine. Je développe des plateformes complètes et modulables : gestion de stocks, espaces clients personnalisés, systèmes de réservation... Des solutions sur mesure qui automatisent et simplifient votre quotidien."
+        description : "Plus qu'un simple site vitrine. Je développe des plateformes complètes pour simplifier et automatiser votre quotidien : gestion de stocks, espaces clients personnalisés, systèmes de réservation... Aussi facile d'utilisation pour vos clients que pour vous !"
     },    
     {
-        title : 'Refonte & Optimisation',
+        title : 'Optimisation et SEO',
         logo : '/svg/repair.svg',
-        description : "J’optimise votre site sur les plans technique et visuel : vitesse de chargement, responsive design et SEO, pour offrir une expérience plus fluide et mieux référencée."
-    },    
-    {
-        title : "Intégration de fonctionnalités IA",
-        logo : '/svg/robot.svg',
-        description : "Je vous aide à tirer parti de l’intelligence artificielle en intégrant des solutions simples et concrètes, toujours pensées pour s’intégrer naturellement à votre site et à vos usages"
+        description : "Parce que le Web est pour tout le monde, je créé des sites utilisables par tous. Que ce soit un ordinateur dernier cri ou un petit smartphone, votre site se charge rapidement. En plus, vous apparaissez dans les premiers résultats des moteurs de recherche !"
     },    
     {
         title : 'Maintenance & Accompagnement',
         logo : '/svg/talking.svg',
-        description : "Je vous accompagne dans la définition de votre projet web, vous conseille sur les meilleures solutions techniques, puis assure la maintenance et les évolutions de votre site pour qu'il reste performant dans le temps."
+        description : "Je vous accompagne dans toutes les étapes du projet : définition de vos besoins, information sur l'évolution du projet, et maintenance après livraison. Vous restez maître de votre projet du début à la fin, et je vous accompagne pour créer le site dont vous avez toujours rêvé !"
     },    
 ]
 

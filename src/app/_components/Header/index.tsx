@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 
 export default function Header(){
-    const sectionIds = ["about", "services", "portfolio",  "contact"];
+    const sectionIds = ["about", "portfolio", "services",  "contact"];
     const [isVisible, setIsVisible] = useState(false);
     const activeId = useActiveSection(sectionIds);
 

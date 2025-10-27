@@ -5,9 +5,8 @@ type sectionProps = {
 }
 
 const titles: Record<string, string> = {
-  'about' : "about me",
-  'portfolio': "projects",
-  'wip' : "en ce moment",
+  'about' : "à propos",
+  'portfolio': "mes projets",
 };
 
 export default function Section({id, children} : sectionProps) {

@@ -27,10 +27,6 @@ export default async function IndexPage() {
       <Section id='about'>
         <About />
       </Section>
-
-      <Section id='services'>
-        <Services />
-      </Section>
       
       <Section id='portfolio'>
         {projects.map((project, index) => (
@@ -39,6 +35,9 @@ export default async function IndexPage() {
         <Link className="block w-full text-foreground text-right hover:underline" href='/projects'><h2>En voir +</h2></Link>
       </Section>
 
+      <Section id='services'>
+        <Services />
+      </Section>
 
       <Section id='contact'>
         <Contact/>

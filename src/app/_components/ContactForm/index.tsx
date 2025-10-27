@@ -55,7 +55,7 @@ export default function ContactForm() {
                     value={values?.message}
                     onChange={handleChange}
                     rows={6}
-                    placeholder="Une idée de projet, une suggestion ?"
+                    placeholder="parlez-moi de votre projet !"
                     className="w-full resize-none outline-none bg-white p-1 rounded-md"
                 />                
             </div>
