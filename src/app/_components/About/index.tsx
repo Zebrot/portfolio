@@ -40,10 +40,10 @@ export default function About() {
             Je suis Pierre Terrancle, développeur web passionné par la création d&apos;expériences numériques exceptionnelles
           </p>
           <p>
-            Alliant design et code, je m&apos;attache à créer des solutions performantes techniquement et intuitives pour l&apos;utilisateur
+            Vous êtes un artiste, un artisan indépendant, un designer ? 
           </p>
           <p>
-            Mon terrain de prédilection : javaScript, en particulier l&apos;écosystème React, enrichi aujourd&apos;hui par les nouvelles perspectives de l&apos;IA
+            Je créé votre site, personnalisé, facile d'utilisation, clés en main. 
           </p>
 
         </div>

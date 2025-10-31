@@ -27,6 +27,12 @@
   --color-opacityGrey : var(--opacityGrey);
   --color-green : var(--green);
   --color-red : var(--red);
+
+  --color-accentBlue : var(--accentBlue);
+  --color-accentOrange : var(--accentOrange);
+  --color-accentRed : var(--accentRed);
+  --color-accentGreen : var(--accentGreen);
+  
   --font-sans: var(--font-kufi);
   --font-mono: var(--font-kufi);
 }

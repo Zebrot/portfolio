@@ -28,7 +28,7 @@ export default function MainLayout({
         <Schema />
       </head>
       <body>
-        <main className="container max-w-3xl">
+        <main className="container">
             {children}
         </main>
         
