@@ -43,7 +43,7 @@ export default function About() {
             Vous êtes un artiste, un artisan indépendant, un designer ? 
           </p>
           <p>
-            Je créé votre site, personnalisé, facile d'utilisation, clés en main. 
+            Je créé votre site, personnalisé, facile d&apos;utilisation, clés en main. 
           </p>
 
         </div>
